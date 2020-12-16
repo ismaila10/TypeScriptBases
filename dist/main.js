@@ -1,4 +1,4 @@
-function helloGulp(arg1) {
-    console.log('Gulp : ' + arg1);
-}
-helloGulp('Yo. Ishlolo');
+"use strict";
+exports.__esModule = true;
+var helloGulp_1 = require("./helloGulp");
+helloGulp_1.helloGulp('Yo. Ishlolo');

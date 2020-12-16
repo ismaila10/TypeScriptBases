@@ -1,5 +1,3 @@
-function helloGulp(arg1: string) : void {
-    console.log('Gulp : ' + arg1);
-}
+import { helloGulp } from './helloGulp' 
 
 helloGulp('Yo. Ishlolo');
