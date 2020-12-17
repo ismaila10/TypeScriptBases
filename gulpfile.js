@@ -23,7 +23,7 @@ gulp.task('default', ["html"], function () {
     .pipe(source('bundle.js'))
     .pipe(gulp.dest("dist"));
 });
-
+//iso
 /*gulp.task('default', function () {
     return gulp.src('src/*.ts')
         .pipe(ts({
