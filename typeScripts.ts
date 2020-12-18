@@ -57,9 +57,16 @@ g.toArray()
 
 let deco1 = (constructeur) => console.log('Décorateur appelé');
 
+let deco2: PropertyDecorator = (prototype, name) =>{
+    console.log(prototype);
+    console.log(name);
+} 
+
 @deco1
 class CL3<T> {
     constructor (public arg1: T, public arg2: T) {}
+    @deco2
+    prop1: string = "foo";
 }
 
 let dec = new CL3(1, 2);

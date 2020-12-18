@@ -44,11 +44,19 @@ var g = new CL2(1, 2); // let g = new CL2<number>(1, 2);
 g.toArray();
 // Décorateurs=> de class: fonctions exécutées lorsqu'une nouvelle instance de la classe est créée
 var deco1 = function (constructeur) { return console.log('Décorateur appelé'); };
+var deco2 = function (prototype, name) {
+    console.log(prototype);
+    console.log(name);
+};
 var CL3 = /** @class */ (function () {
     function CL3(arg1, arg2) {
         this.arg1 = arg1;
         this.arg2 = arg2;
+        this.prop1 = "foo";
     }
+    __decorate([
+        deco2
+    ], CL3.prototype, "prop1");
     CL3 = __decorate([
         deco1
     ], CL3);
