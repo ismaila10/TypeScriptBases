@@ -53,3 +53,13 @@ class CL2<T> {
 let g = new CL2(1, 2); // let g = new CL2<number>(1, 2);
 g.toArray()
 
+// Décorateurs=> de class: fonctions exécutées lorsqu'une nouvelle instance de la classe est créée
+
+let deco1 = (constructeur) => console.log('Décorateur appelé');
+
+@deco1
+class CL3<T> {
+    constructor (public arg1: T, public arg2: T) {}
+}
+
+let dec = new CL3(1, 2);
